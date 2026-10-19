@@ -1,0 +1,11 @@
+{{div
+| style = display: flex; align-items: center; gap: 8px; background: #27272a; padding: 8px 12px; border-radius: 6px; width: 100%;
+}}
+{{div
+| style = width: 8px; height: 8px; border-radius: 50%; background: {{status_color | #22c55e}};
+}}
+{{span
+| style = color: #f4f4f5; font-size: 13px; font-weight: 500;
+| content = {{label | Système Actif}}
+}}
+{{/div}}
