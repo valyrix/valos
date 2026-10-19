@@ -1,0 +1,14 @@
+{{div
+| style = display: flex; align-items: center; justify-content: space-between; padding: 8px 0; width: 100%;
+}}
+{{span
+| style = color: #f4f4f5; font-size: 14px;
+| content = {{label | Option}}
+}}
+{{input
+| type = checkbox
+| id = {{id}}
+| onchange = {{action}}
+| style = cursor: pointer; width: 18px; height: 18px; accent-color: #2563eb;
+}}
+{{/div}}
