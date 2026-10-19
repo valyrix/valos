@@ -1,5 +1,0 @@
-{{button
-| onclick = {{bridge_action}}
-| style = background: {{bg | #dc2626}}; color: #ffffff; padding: 10px 16px; border-radius: 6px; border: none; cursor: pointer; font-size: 14px; font-weight: 500; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;
-| content = {{label | Action}}
-}}
