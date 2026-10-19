@@ -1,0 +1,6 @@
+{{button
+| id = {{id}}
+| onclick = {{action}}
+| style = background: {{bg | #2563eb}}; color: {{color | #ffffff}}; padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer; font-size: 14px; font-weight: 500; transition: background 0.1s ease; {{extra_style}}
+| content = {{label | Bouton}}
+}}
