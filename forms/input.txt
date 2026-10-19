@@ -1,7 +1,0 @@
-{{input
-| type = {{type | text}}
-| id = {{id}}
-| placeholder = {{placeholder | Saisir une valeur...}}
-| value = {{value | }}
-| style = background: #09090b; border: 1px solid #3f3f46; color: #f4f4f5; padding: 8px 12px; border-radius: 6px; outline: none; font-size: 14px; width: 100%; {{extra_style}}
-}}
