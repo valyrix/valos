@@ -1,0 +1,21 @@
+{{div
+| style = display: flex; flex-direction: column; gap: 16px; color: #f4f4f5;
+}}
+{{h3
+| content = Statut Réseau & Wi-Fi
+| style = font-size: 18px; font-weight: 600; margin: 0; color: #ffffff;
+}}
+{{p
+| content = Visualisez l'état de vos connexions via NetworkManager (nmcli).
+| style = color: #a1a1aa; font-size: 13px; margin: 0;
+}}
+{{div
+| style = display: flex; gap: 10px; margin-top: 10px;
+}}
+{{button
+| content = Rafraîchir les connexions
+| onclick = fetch('http://localhost:3000/api/network/status').then(r => r.json()).then(data => alert(data.output))
+| style = background: #27272a; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer;
+}}
+{{/div}}
+{{/div}}
