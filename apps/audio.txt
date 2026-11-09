@@ -1,0 +1,31 @@
+{{div
+| style = display: flex; flex-direction: column; gap: 16px; color: #f4f4f5;
+}}
+{{h3
+| content = Gestion du Volume (PipeWire)
+| style = font-size: 18px; font-weight: 600; margin: 0; color: #ffffff;
+}}
+{{p
+| content = Ajustez directement le niveau de sortie audio de votre système Debian.
+| style = color: #a1a1aa; font-size: 13px; margin: 0;
+}}
+{{div
+| style = display: flex; gap: 10px; margin-top: 10px;
+}}
+{{button
+| content = Muet (0%)
+| onclick = fetch('http://localhost:3000/api/audio/volume/0')
+| style = background: #27272a; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer;
+}}
+{{button
+| content = 50%
+| onclick = fetch('http://localhost:3000/api/audio/volume/50')
+| style = background: #27272a; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer;
+}}
+{{button
+| content = 100%
+| onclick = fetch('http://localhost:3000/api/audio/volume/100')
+| style = background: #2563eb; color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer;
+}}
+{{/div}}
+{{/div}}
