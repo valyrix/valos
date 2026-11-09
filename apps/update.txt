@@ -1,0 +1,26 @@
+{{div
+| style = display: flex; flex-direction: column; gap: 16px; color: #f4f4f5;
+}}
+
+{{h3
+| content = Mise à jour du Système (ValOS)
+| style = font-size: 18px; font-weight: 600; margin: 0; color: #ffffff;
+}}
+
+{{p
+| content = Récupère les derniers commits de votre dépôt GitHub et applique les mises à jour en direct.
+| style = color: #a1a1aa; font-size: 13px; margin: 0; line-height: 1.4;
+}}
+
+{{div
+| style = display: flex; gap: 12px; margin-top: 10px;
+}}
+
+{{button
+| content = 🔄 Mettre à jour le système
+| onclick = fetch('http://localhost:3000/api/sys/update').then(r => r.json()).then(data => alert(data.message || 'Mise à jour lancée !')).catch(e => alert('Erreur de connexion au bridge'))
+| style = background: #2563eb; color: #fff; border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; font-weight: 500; font-size: 13px;
+}}
+
+{{/div}}
+{{/div}}
