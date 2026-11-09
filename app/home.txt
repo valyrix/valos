@@ -1,0 +1,26 @@
+{{div
+| style = display: flex; flex-direction: column; gap: 16px; color: #f4f4f5;
+}}
+{{h2
+| content = Bienvenue sur ValOS
+| style = font-size: 22px; font-weight: 600; color: #ffffff; margin: 0;
+}}
+{{p
+| content = Système Minimal opérationnel sous Debian. Pilotez votre machine à l'aide de fichiers texte purs.
+| style = color: #a1a1aa; font-size: 14px; margin: 0; line-height: 1.5;
+}}
+{{div
+| style = display: flex; gap: 12px; margin-top: 12px;
+}}
+{{button
+| content = 🔊 Gérer l'Audio
+| onclick = os.launchApp('apps/audio.txt')
+| style = background: #18181b; border: 1px solid #27272a; color: #fff; padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500;
+}}
+{{button
+| content = 🌐 Gérer le Réseau
+| onclick = os.launchApp('apps/network.txt')
+| style = background: #18181b; border: 1px solid #27272a; color: #fff; padding: 10px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500;
+}}
+{{/div}}
+{{/div}}
