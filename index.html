@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValOS</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+        html, body { width: 100vw; height: 100vh; background-color: #09090b; color: #f4f4f5; font-family: system-ui, sans-serif; overflow: hidden; }
+        .valos-desktop { display: flex; flex-direction: column; width: 100%; height: 100%; }
+        .valos-taskbar { height: 48px; background: #121214; border-bottom: 1px solid #27272a; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+        .taskbar-nav { display: flex; gap: 8px; }
+        .taskbar-btn { background: #18181b; color: #f4f4f5; border: 1px solid #27272a; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; }
+        .taskbar-btn:hover { background: #27272a; }
+        .valos-workspace { flex: 1; padding: 24px; overflow-y: auto; display: flex; flex-direction: column; }
+        #app-container { flex: 1; background: #121214; border: 1px solid #27272a; border-radius: 12px; padding: 24px; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body>
+    <div class="valos-desktop">
+        <div class="valos-taskbar">
+            <span style="font-weight: bold; font-size: 15px; color: #3b82f6;">⚡ ValOS</span>
+            <div class="taskbar-nav">
+                <button class="taskbar-btn" onclick="os.launchApp('apps/home.txt')">Accueil</button>
+                <button class="taskbar-btn" onclick="os.launchApp('apps/audio.txt')">Audio</button>
+                <button class="taskbar-btn" onclick="os.launchApp('apps/network.txt')">Réseau</button>
+            </div>
+            <span id="clock" style="font-size: 13px; color: #a1a1aa;">00:00</span>
+        </div>
+        <div class="valos-workspace">
+            <div id="app-container"></div>
+        </div>
+    </div>
+    <script src="engine/valengine.js"></script>
+    <script>
+        window.os = {
+            launchApp: async (path) => { await window.ValEngine.loadApp(path, '#app-container'); }
+        };
+        setInterval(() => {
+            document.getElementById('clock').textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }, 1000);
+        window.onload = () => { os.launchApp('apps/home.txt'); };
+    </script>
+</body>
+</html>
